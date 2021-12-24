@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>SteamCoin</title>
+        <link rel="icon" href="/static/images/steamcoin.png" />
+        <link rel="stylesheet" href="/static/vendors/mdi/css/materialdesignicons.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center nav-container">
+                <div class="col-10 nav-line">
+                    <img id="logo" src="/static/images/steamcoin.png" width="200px">
+                    <nav class="navbar navbar-expand-lg navbar-dark actual-navbar">
+                        <div class="container-fluid">
+                          <a class="navbar-brand" href="#">SteamCoin</a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-right: 0px !important;">
+                              <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/dashboard">Dashboard</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link active" href="#">Settings</a>
+                              </li>
+                            </ul>
+                            <div class="d-flex mx-auto">
+                              <p class="mt-1 mb-0 text-white">1 STC = $133337</p>
+                            </div>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                  <a class="nav-link" href="/logout">Logout</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-8">
+                  <div class="card ancient-card mx-auto updoc-card">
+                      <div class="card-body w-100 ms-3" style="min-height: 400px;">
+                          <p class="w-100">Document verification</p>
+                          <p class="mid-help">Please select your identification document for upload..</p>
+                          <div class="row">
+                              <div class="col text-center mt-5">
+                                  <div class="upload-area">
+                                    <input type="file" id="verificationDoc" name="verificationDoc" />
+                                    <img src="/static/images/upload-doc.png" height="150px" id="upload-btn">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="container text-center mt-5" id="loading-container">
+                              <div class="progress">
+                                  <div class="progress-bar progress-bar-striped progress-bar-animated" id="progressbar" style="width: 60%;"></div>
+                              </div>
+                          </div>
+                          <div  class="mt-5">
+                            {% if user.verification_doc %}
+                                <p id="uploaded-file-ref">Uploaded file: <a id="uploaded-file" href="/uploads/{{user.verification_doc}}" target="_blank">{{user.verification_doc}}</a></p>
+                                <p id="uploaded-file-msg">An admin will review your document shortly!</p>
+                            {% else %}
+                            <p id="uploaded-file-ref" class="hidden">Uploaded file: <a id="uploaded-file" href="/uploads/passport.pdf" target="_blank">passport.pdf</a></p>
+                            <p id="uploaded-file-msg" class="hidden">An admin will review your document shortly!</p>
+                            {% endif %}
+                         </div>
+                            <p class="card-text text-center mt-1" id="resp-msg">Please wait..</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+       
+        <script type="text/javascript" src="/static/js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/js/settings.js"></script>
+    </body>
+</html>

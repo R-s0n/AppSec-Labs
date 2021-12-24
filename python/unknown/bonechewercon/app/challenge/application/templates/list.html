@@ -1,0 +1,29 @@
+<!DOCTYPE html><head>
+  <title>🔥 BonechewerCon 🔥</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' href='/static/css/main.css'>
+  <link preload rel='icon' type='img/png' href='/static/images/favicon.png'>
+  <link preload as='font' type='font/woff2' href='/static/css/P2P.woff2'>
+</head>
+<body>{% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+         {% for category, message in messages %}
+            <span>{{ message }}</span>
+            <br><br>
+          {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <table border='7'>
+        <thead class='thead-dark'>
+            <tr>
+                <th>#</th>
+                <th>User</th>
+                <th>Idea</th>
+                <th>Submitted at</th>
+            </tr>
+        </thead>
+        <tbody>
+    </table>
+</body>
+<script src='/static/js/main.js'></script>  
+</html>

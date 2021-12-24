@@ -1,0 +1,27 @@
+DROP TABLE IF EXISTS presentations;
+DROP TABLE IF EXISTS reports;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE presentations (
+	id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    user TEXT NOT NULL,
+	idea TEXT NOT NULL,
+	created_at NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE reports (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    blocked_uri  TEXT NOT NULL,
+    document_uri TEXT NOT NULL,
+    token INTEGER,
+	created_at NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE users (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	user TEXT,
+	token INTEGER,
+	created_at NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO presentations (user, idea) VALUES ('admin', 'HTB{f4k3_fl4g_f0r_t3st1ng!}')

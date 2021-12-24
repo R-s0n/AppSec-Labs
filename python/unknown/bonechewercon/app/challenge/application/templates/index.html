@@ -1,0 +1,35 @@
+<!DOCTYPE html><head>
+  <title>🔥 BonechewerCon 🔥</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' href='/static/css/main.css'>
+  <link preload rel='icon' type='img/png' href='/static/images/favicon.png'>
+  <link preload as='font' type='font/woff2' href='/static/css/P2P.woff2'>
+</head>
+<body>
+<table>
+   <tr height='25'>
+     <th><h1><img src='/static/images/small_fire.gif'>Welcome to the BoneChewer Event Registration!<img src='/static/images/small_fire.gif'></h1></th>
+   </tr>
+   <tr height='15'>
+     <th><h3>Come to the littest convention ever, we've got plenty of partying and a lot of booze.<br>Our keynote speaker, the devil himself, will be presenting us his research on how to effectively poke people with a trident.<br> I'd say don't miss it, but we both know you'd probably end up here anyway.</h3></th>
+   </tr>
+   <tr><th>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+         {% for category, message in messages %}
+            <span>{{ message }}</span>
+            <br><br><br><br><br>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+     <img src='/static/images/bonechewer.gif'><br>Submit a talk for next year's CFP!<br><br>
+      <form method='POST'>
+      <textarea name='idea'></textarea>
+         <button type='submit'>Submit</button>
+      </form>
+
+   </th></tr>
+   <tr height='35'><th>< Bonechewer Inc. | <a href='/'>Home</a> | <a href='/list'>Admin</a> ></th></tr>
+</table>
+</body>
+</html>

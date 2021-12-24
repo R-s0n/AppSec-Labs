@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        {{#if debug}}
+        <template id="developerMode">{{{debug}}}</template>
+        {{/if}}
+        <div id="curve"></div>
+        <script src="assets/js/bundle.js" nonce="{{nonce}}"></script>
+        <script src="assets/js/engine.js" nonce="{{nonce}}"></script>
+    </body>
+</html>

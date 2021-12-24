@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>AnalyticalEngine</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+SC&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Forum&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lancelot&amp;display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand" href="/"><i class="fas fa-cogs"></i>
+                <strong> The Analytical Engine</strong>
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/report">Report</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mb-4">
+        <div class="card">
+            <div class="card-body hero">
+                <h1 class="text-center card-title m-0">The Analytical Engine</h1>
+                <h3 class="text-center">
+                    <em>A wonderous invention! A marvel of mechanical ingenuity!</em>
+                    <br />
+                    Charles Babbage's theoretical masterpiece: the Analytical Engine, here in the web!
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr />
+                <h2 class="text-center">
+                    <strong>Input</strong>
+                </h2>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <textarea rows="15" id="input"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr />
+                <h2 class="text-center">
+                    <strong>Controls</strong>
+                </h2>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col justify-content-start ms-3">
+                <h3>Try some cards:</h3>
+                <ul>
+                    <li><a href="/?card=mandelbrotviewer.ae">Mandelbrot Set (takes some time to run)</a></li>
+                    <li><a href="/?card=lmc.ae">Little Man Computer (takes some time to run)</a></li>
+                </ul>
+            </div>
+            <div class="col d-flex justify-content-end me-3">
+                <button class="btn text-white btn-rounded my-4" type="button" id="reset"><i class="fas fa-caret-square-left"></i>&nbsp;&nbsp;Reset</button>
+                <button class="btn text-white btn-rounded my-4" type="button" id="execute">Execute&nbsp;&nbsp;<i class="fas fa-play"></i></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr />
+                <h2 class="text-center">
+                    <strong>Save / Load</strong>
+                </h2>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col justify-content-start ms-3">
+                <h3>Load</h3>
+                <select id="cards">
+                </select>
+            </div>
+            <div class="col d-flex justify-content-end me-3">
+                <button class="btn text-white btn-rounded my-4" type="button" id="save"><i class="fas fa-save"></i>&nbsp;&nbsp;Save</button>
+                <button class="btn text-white btn-rounded my-4" type="button" id="load">Load&nbsp;&nbsp;<i class="fas fa-download"></i></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr />
+                <h2 class="text-center">
+                    <strong>Output</strong>
+                </h2>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3 class="text-center">Log</h3>
+            </div>
+            <div class="col">
+                <h3 class="text-center">Screen</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="square p-2" id="output"></div>
+            </div>
+            <div class="col">
+                <div class="square p-2" id="curve"></div>
+            </div>
+        </div>
+    </div>
+    <iframe src="/engine" id="engine" class="d-none" sandbox="allow-scripts allow-same-origin"></iframe>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" nonce="{{nonce}}"></script>
+    <script nonce="{{nonce}}" src="assets/js/main.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+body {
+  background-color: #f7e7d0;
+  font-family: Forum, serif;
+}
+
+nav {
+  background-color: #db0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Lancelot, serif;
+}
+
+.hero {
+  background-color: #622;
+  color: #ba0;
+  border: 3px solid #ba0;
+}
+
+.card {
+  margin: 2ch 0;
+}
+
+hr {
+  margin: 20px;
+  background-color: #736800;
+  padding-top: 2px;
+  border: 1px solid #736800;
+}
+
+button {
+  font-family: 'Alegreya SC';
+  background: linear-gradient(black, #777);
+  border: none !important;
+  transition: background-color 1s;
+  text-shadow: 0px -1px 1px rgb(255 255 255 / 25%), 0px 1px 1px rgb(0 0 0 / 50%);
+  box-shadow: 0 6px 12px #9a9a9a;
+}
+
+button:hover {
+  background: linear-gradient(black, #555555);
+}
+
+button:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+textarea {
+  width: 100%;
+  max-width: 50vw;
+  font-family: monospace;
+}
+
+.square {
+    width: 100%;
+    aspect-ratio: 1;
+    background: white;
+}
+
+#output {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    overflow-y: auto;
+}

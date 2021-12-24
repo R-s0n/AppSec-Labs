@@ -1,0 +1,6 @@
+selenium
+Flask
+pyjwt
+requests
+pycryptodome
+cryptography
