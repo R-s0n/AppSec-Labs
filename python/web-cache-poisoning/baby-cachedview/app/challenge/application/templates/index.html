@@ -1,0 +1,66 @@
+<html>
+<head>
+    <meta name='author' content='makelaris, makelarisjr'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>baby CachedView</title>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==' crossorigin='anonymous' />
+    <link rel='shortcut icon' href='/static/assets/favicon.png' type='image/png'>
+    <link rel='preconnect' href='//fonts.googleapis.com'>
+    <link rel='preconnect' href='//fonts.gstatic.com' crossorigin>
+    <link href='//fonts.googleapis.com/css2?family=Jua&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='/static/css/main.css'>
+</head>
+<body>
+    <div id='alerts'></div>
+    <div class='jumbotron jumbotron-fluid' align='center'>
+        <img src='/static/assets/bunny.gif' height='160px'>
+        <div class='container'>
+            <h1 class='display-2'>CachedView</h1>
+            <p>Cache your favourite URLs</p>
+        </div>
+    </div>
+
+    <main role='main'>
+        <div class='container'>
+            <div class='row'>
+                <form class='form-inline' action='/' method='POST' id='form'>
+                    <div class='input-group'>
+                        <div class='input-group-prepend'>
+                            <span class='input-group-text' id='describeUrl'>URL</span>
+                        </div>
+                        <input type='text' class='form-control' id='url' name='url' autocomplete='off' aria-describedby='describeUrl' placeholder='https://google.com'>
+                        <div class='input-group-append'>
+                            <button type='submit' class='btn btn-primary'>Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id='screenshot'></div>
+        <div id='loading' style='display:none;'>
+            <div class='sk-cube-grid'>
+                <div class='sk-cube sk-cube1'></div>
+                <div class='sk-cube sk-cube2'></div>
+                <div class='sk-cube sk-cube3'></div>
+                <div class='sk-cube sk-cube4'></div>
+                <div class='sk-cube sk-cube5'></div>
+                <div class='sk-cube sk-cube6'></div>
+                <div class='sk-cube sk-cube7'></div>
+                <div class='sk-cube sk-cube8'></div>
+                <div class='sk-cube sk-cube9'></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class='footer'>
+        <div class='container'>
+            Powered by: <img src='/static/assets/htb.png' height='50'>
+        </div>
+    </footer>
+</body>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js' integrity='sha512-/DXTXr6nQodMUiq+IUJYCt2PPOUjrHJ9wFrqpJ3XkgPNOZVfMok7cRw6CSxyCQxXn6ozlESsSh1/sMCTF1rL/g==' crossorigin='anonymous'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js' integrity='sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==' crossorigin='anonymous'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js' integrity='sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==' crossorigin='anonymous'></script>
+<script src='/static/js/main.js'></script>
+</html>
