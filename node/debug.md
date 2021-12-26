@@ -15,4 +15,7 @@ Example: `cd code-injection/baby-breaking-grad/app`
 5. In VS Code, select the 'Run and Debug' icon of the left side of the GUI:
 
 
-6. Select 'create a launch.json file'
+6. Click the 'create a launch.json file' link and select 'Node.js':
+
+
+7. Click the green play button to run the application w/ debugging:
