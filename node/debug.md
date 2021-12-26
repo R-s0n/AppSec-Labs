@@ -49,4 +49,4 @@ Example launch.json file:
 ```
 
 7. Click the green play button to run the application w/ debugging:
-![Debug step 3](../static/img/node-debug-3.png)
+![Debug step 3](../static/img/node-debug-3.PNG)
